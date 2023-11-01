@@ -38,7 +38,7 @@ app.post("/make-payment", async (req, res) => {
       description: paymentIntent?.description,
       paymentMethod: paymentIntent?.payment_method,
       paymentId: paymentIntent?.id,
-      reason: "Payment not initiated",
+      reason: "Payment not confirmed",
     },
   };
   if (!paymentIntent) delete objToWrite.paymentDetails.paymentId;
